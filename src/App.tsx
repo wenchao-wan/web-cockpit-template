@@ -101,10 +101,11 @@ const App: React.FC = () => {
         style={{ 
           width: '1920px', 
           height: '1080px', 
-          transform: `scale(${scale.x}, ${scale.y})`,
-          transformOrigin: 'center center'
+          transform: `scale(${scale.x})`,
+          transformOrigin: 'center center',
+          visibility: scale.ready ? 'visible' : 'hidden'
         }}
-        className="relative bg-slate-950/20 shadow-2xl overflow-hidden flex flex-col"
+        className="relative bg-slate-950/20 shadow-2xl overflow-hidden flex flex-col shrink-0"
       >
         {/* Header Section */}
         <header className="h-[80px] w-full flex items-center justify-between px-10 relative z-10 border-b border-slate-800/50">
